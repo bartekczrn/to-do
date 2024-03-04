@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-size: 20px;
+}
+
+body {
+    background-color: #219EBC;
+}
+
+main {
+    align-items: center;
+
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 70px 50px;
+
+    border-radius: 30px;
+    border: 3px solid #00689c;
+    background-color: rgb(255, 255, 255);
+}
+
+.toDo h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.inputRow {
+    display: flex;
+    justify-content: space-between;
+    background-color: #8ECAE6;
+    padding-left: 20px;
+    border-radius: 50px;
+    margin-bottom: 70px;
+
+    transition: all 0.3s ease;
+}
+
+.inputRow:hover {
+    transform: scale(1.03);
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #219EBC;
+    padding: 16px 50px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 8px 15px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 25px;
+    margin-top: 25px;
+
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+ul li:hover{
+    background-color: #219EBC;
+    transform:scale(1.05);
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: transparent;
+    border: black 3px solid;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: grey;
+    text-decoration: line-through;
+
+    transition: all 0.3s ease;
+}
+
+ul li.checked::before {
+    background-image: url(check-mark.png);
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+ul li span {
+    position: absolute;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 33px;
+    line-height: 35px;
+    top: 5px;
+    text-align: center;
+    color: black;
+
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+ul li span:hover {
+    background-color: #00689c;
+    border-radius: 13px;
+    transform: scale(1.25)
+}
+
+@media only screen and (max-width: 750px) {
+
+    main {
+        max-width: 350px;
+    }
+
+    .toDo h1 {
+        justify-content: center;
+    }
+
+    .inputRow {
+        flex-direction: column;
+        background-color: transparent;
+        align-items: center;
+        padding-left: 0;
+        margin-bottom: 50px;
+        
+    }
+
+    input {
+        background-color:#8ECAE6;
+        padding: 15px;
+        border-radius: 50px;
+        text-align: center;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px 50px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .inputRow {
+        margin-bottom: 30px;
+    }
+
+    main {
+        max-width: 250px;
+    }
+
+    input {
+        background-color:#8ECAE6;
+        padding: 13px;
+        border-radius: 50px;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 8px 35px;
+        text-align: center;
+    }
+}
