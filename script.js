@@ -22,9 +22,6 @@ function addTask(){
     saveData()
 }
 
-
-
-
 listSection.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
@@ -36,13 +33,9 @@ listSection.addEventListener("click", function(e){
     }
 }, false);
 
-
-
-
 function saveData(){
     localStorage.setItem("data", listSection.innerHTML);
 }
-
 
 function showSavedData(){
     listSection.innerHTML = localStorage.getItem("data");
